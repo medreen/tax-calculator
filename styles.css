@@ -5,6 +5,35 @@
     background-color: #c7cbce;    
 }
 
+.nav-bar {
+    display: flex;
+    padding: 12px;   
+    gap: 40px; 
+}
+
+
+.right {
+    position: relative;
+    left: 700px;     
+    font-size: larger; 
+    text-decoration: underline; 
+    font-weight: lighter;
+    margin-top: 15px;
+    transition: 0.3s ease;
+}
+
+.right:hover {
+    transform: scale(1.05);
+    color: #333;
+}
+
+
+h5 {
+    font-weight: lighter;
+    font-size: medium;
+    text-decoration: none; 
+}
+
 h3 {
     font-family: 'Poppins';
     font-size: large;
@@ -29,10 +58,13 @@ h3 {
 .info{
     border-radius: 3px;
     background-color: #343a40;
+    font-family: Poppins; 
+    font-weight: 300;
+    font-size: large;       
 }
 
 td {
-    font-size: larger;
+    font-size: large;
     font-family: poppins;
     font-weight: 400;
 }
@@ -42,9 +74,7 @@ th {
     font-weight: bolder;
     font-size: larger;
 }
- .info {
-    font-family: Poppins;
- }
+
 
 .rounded-table {
   border-collapse: separate; /* important for border-radius */
@@ -71,22 +101,39 @@ table {
     border-radius: 12px;
 }
 
-@media (min-width: 768px) {  
-    .bands {
+@media (min-width: 500px) {  
+.bands {
         left: 80px;  
-    }
 }
 
-@media (min-width: 1200px) { 
-    .bands {
-        left: 250px;
-    }
+.bands {
+        left: 110px;
 }
 
-@media (min-width: 1200px) {
 .row{
-    width: 1200px;
+    width:650px;
     position: relative;
-    left: 180px;
+    left: 40px;
 }
+
+.nav-bar {
+    display: flex;
+    padding: 10px;   
+    gap: 20px; 
 }
+
+.right {
+    position: relative;
+    left: 50px;     
+    font-size: larger; 
+    text-decoration: underline; 
+    font-weight: lighter;
+    margin-top: 15px;
+    transition: 0.3s ease;
+}
+
+.right:hover {
+    transform: scale(1.05);
+    color: #333;
+
+}}

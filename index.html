@@ -20,7 +20,13 @@
   </head>
   <body>
     <div class="container-fluid justify-content-center align-items-center">
-      <h3 class="bg-dark text-white rounded text-center p-3">TAX CALCULATOR</h3>
+      <div class="nav-bar bg-dark rounded">
+      <h3 class="text-white ">TAX <br>CALCULATOR</h3>
+      <a href="https://itax.kra.go.ke/KRA-Portal/" target="_blank"><h5 class="text-white right ">Check out Itax?</h5></a>
+      <a href="https://www.kra.go.ke/services/file-my-returns" target="_blank"><h5 class="text-white right ">Would you like to file your returns?</h2></a>      
+      </div>
+
+      
       <div class="alert alert-light text-center alert-dismissible fade show">
         <button
           type="button"
@@ -30,21 +36,30 @@
         ></button>
         Enter the specified fields without commas or periods.
       </div>
+      <div class="info mt-2 mb-1 p-3">
+        <p class="text-center text-white">
+          Tax is a mandatory payment collected by KRA to fund public services
+          like roads, hospitals, schools, and security. Understanding PAYE, tax
+          brackets, reliefs, and deductions helps you manage your income, avoid
+          penalties, and read your payslip clearly. This calculator gives you a
+          quick estimate of your tax so you can plan your money better.
+        </p>
+      </div>
       <div class="row bg-secondary rounded">
         <div class="col-4 p-4">
           <form id="tax_form">
             <div class="mb-3">
               <label for="basic" class="form-label">Basic Salary</label>
-              <input
-                type="number"
-                class="form-control"
-                id="basic"
-                required
-              />
+              <input type="number" class="form-control" id="basic" required />
             </div>
             <div class="mb-2">
               <label for="benefits" class="form-label">Benefits</label>
-              <input type="number" class="form-control" id="benefits" required/>
+              <input
+                type="number"
+                class="form-control"
+                id="benefits"
+                required
+              />
             </div>
 
             <button type="submit" class="btn btn-dark">Calculate</button>
@@ -121,38 +136,14 @@
                 <td id="paye"></td>
               </tr>
               <tr>
-                <td>Net Salary</td>
-                <td id="net_salary"></td>
+                <td><strong>Net Salary</strong></td>
+                <td id="net_salary"><strong></strong></td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
-      <div class="info mt-2 mb-1 p-3">
-        <p class="text-center text-white">
-          Tax is a compulsory financial contribution imposed by the government
-          on individuals and businesses to support the nation's economic and
-          social development. In Kenya, the Kenya Revenue Authority (KRA) is
-          responsible for administering and collecting taxes, which come from
-          various sources such as income, employment, business profits,
-          property, goods, and services. These funds play a crucial role in
-          ensuring that the country operates smoothly and that citizens receive
-          essential public services. Taxes are used to build and maintain roads,
-          hospitals, schools, and other infrastructure; support national
-          security; strengthen public health systems; provide social protection
-          programs; and sustain many government operations. Understanding how
-          tax works is important because everyone who earns income has a legal
-          responsibility to contribute, and failure to comply can lead to
-          penalties. By learning how PAYE, reliefs, deductions, and tax brackets
-          work, you gain control over your finances and can make informed
-          decisions about budgeting, saving, and planning for the future.
-          Knowing how much tax you owe helps you avoid surprises in your payslip
-          and empowers you to stay compliant with tax regulations. With the
-          right tools—like this tax calculator—you can quickly estimate your tax
-          obligations and gain clarity on how your income is being taxed,
-          allowing you to manage your money more confidently and responsibly.
-        </p>
-      </div>
+
       <div class="container-fluid bg-dark">
         <div class="card-footer text-white text-center">
           © 2025 TaxCalc. All rights reserved.
@@ -162,7 +153,7 @@
 
     <script src="tax.js"></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstraTaxp.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
