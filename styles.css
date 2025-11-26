@@ -57,27 +57,27 @@ th {
 .rounded-table th,
 .rounded-table td {
   padding: 10px;
-  border-bottom: 1px solid #ddd; /* optional cell borders */
+  border-bottom: 1px solid #ddd; 
 }
 
 
 .bands {
     position: relative;
     top: 100px;
-    left: 60px; /* default for small screens */
+    left: 60px; 
 }
 
 table {
     border-radius: 12px;
 }
 
-@media (min-width: 768px) {  /* tablets and above */
+@media (min-width: 768px) {  
     .bands {
-        left: 80px;  /* move more on larger screens */
+        left: 80px;  
     }
 }
 
-@media (min-width: 1200px) { /* desktops */
+@media (min-width: 1200px) { 
     .bands {
         left: 250px;
     }
