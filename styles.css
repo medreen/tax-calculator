@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.container-fluid {
+    box-shadow: 0 0 20px rgb(37, 36, 36);
+    background-color: #c7cbce;    
+}
+
+h3 {
+    font-family: 'Poppins';
+    font-size: large;
+    font-weight: lighter;
+}
+
+
+
+.form-label {
+    font-family: Poppins;
+    font-weight: bolder;
+    font-size: larger;
+    color: black;  
+}
+
+.row{
+    width: 500px;
+    position: relative;
+    left: 130px;
+}
+
+.info{
+    border-radius: 3px;
+    background-color: #343a40;
+}
+
+td {
+    font-size: larger;
+    font-family: poppins;
+    font-weight: 400;
+}
+
+th {
+    font: caption;
+    font-weight: bolder;
+    font-size: larger;
+}
+ .info {
+    font-family: Poppins;
+ }
+
+.rounded-table {
+  border-collapse: separate; /* important for border-radius */
+  border-spacing: 0;         /* remove spacing between cells */
+  border: 2px solid #000;    /* table border */
+  border-radius: 15px;       /* round corners */
+  overflow: hidden;           /* ensures content doesn't spill */
+}
+
+.rounded-table th,
+.rounded-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd; /* optional cell borders */
+}
+
+
+.bands {
+    position: relative;
+    top: 100px;
+    left: 60px; /* default for small screens */
+}
+
+table {
+    border-radius: 12px;
+}
+
+@media (min-width: 768px) {  /* tablets and above */
+    .bands {
+        left: 80px;  /* move more on larger screens */
+    }
+}
+
+@media (min-width: 1200px) { /* desktops */
+    .bands {
+        left: 250px;
+    }
+}
+
+@media (min-width: 1200px) {
+.row{
+    width: 1200px;
+    position: relative;
+    left: 180px;
+}
+}

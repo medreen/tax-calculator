@@ -3,84 +3,160 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Tax Calculator</title>
   </head>
   <body>
-    <div class="container">
-      <h3>TAX CALCULATOR</h3>
-
-      <div>
-        <form id="tax_form">
-          <div class="mb-3">
-            <label for="basic" class="form-label"
-              >Basic Salary</label
-            >
-            <input
-              type="number"
-              class="form-control"
-              id="basic"
-              aria-describedby="emailHelp"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="benefits" class="form-label"
-              >Benefits</label
-            >
-            <input
-              type="number"
-              class="form-control"
-              id="benefits"
-            />
-          </div>
-
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+    <div class="container-fluid justify-content-center align-items-center">
+      <h3 class="bg-dark text-white rounded text-center p-3">TAX CALCULATOR</h3>
+      <div class="alert alert-light alert-dismissible fade show">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+        Enter the specified fields without commas or periods.
       </div>
-      <div>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Tax Category</th>
-              <th scope="col">Tax Output in KES</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Gross Salary</td>
-              <td id="gross"></td>
-            </tr>
-            <tr>
-              <td>NHIF</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>NSSF</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>NHDF</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Taxable Income</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Payee</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Net Salary</td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="row bg-secondary rounded">
+        <div class="col-4 p-4">
+          <form id="tax_form">
+            <div class="mb-3">
+              <label for="basic" class="form-label">Basic Salary</label>
+              <input
+                type="number"
+                class="form-control"
+                id="basic"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="mb-2">
+              <label for="benefits" class="form-label">Benefits</label>
+              <input type="number" class="form-control" id="benefits" />
+            </div>
+
+            <button type="submit" class="btn btn-dark">Calculate</button>
+          </form>
+        </div>
+        <div class="col-5 ms-5 bands responsive">
+          <table
+            class="table rounded-table table-dark table-hover table-striped"
+          >
+            <thead>
+              <tr>
+                <th scope="col">Tax Bands</th>
+                <th scope="col">Rates</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0 - 24000</td>
+                <td>-> 10%</td>
+              </tr>
+              <tr>
+                <td>24001 - 32333</td>
+                <td>-> 25%</td>
+              </tr>
+              <tr>
+                <td>32334 - 500000</td>
+                <td>-> 30%</td>
+              </tr>
+              <tr>
+                <td>500001 - 800000</td>
+                <td>-> 32.5%</td>
+              </tr>
+              <tr>
+                <td>800000+</td>
+                <td>-> 35%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-sm-12">
+          <table
+            class="table rounded-table table-light table-hover"
+            style="width: 50%"
+          >
+            <thead>
+              <tr>
+                <th scope="col">Tax Category</th>
+                <th scope="col">Tax Output in KES</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Gross Salary</td>
+                <td id="gross"></td>
+              </tr>
+              <tr>
+                <td>NHIF</td>
+                <td id="nhif"></td>
+              </tr>
+              <tr>
+                <td>NSSF</td>
+                <td id="nssf"></td>
+              </tr>
+              <tr>
+                <td>NHDF</td>
+                <td id="nhdf"></td>
+              </tr>
+              <tr>
+                <td>Taxable Income</td>
+                <td id="taxable_income"></td>
+              </tr>
+              <tr>
+                <td>Payee</td>
+                <td id="paye"></td>
+              </tr>
+              <tr>
+                <td>Net Salary</td>
+                <td id="net_salary"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="info mt-2 mb-1 p-3">
+        <p class="text-center text-white">
+          Tax is a compulsory financial contribution imposed by the government
+          on individuals and businesses to support the nation's economic and
+          social development. In Kenya, the Kenya Revenue Authority (KRA) is
+          responsible for administering and collecting taxes, which come from
+          various sources such as income, employment, business profits,
+          property, goods, and services. These funds play a crucial role in
+          ensuring that the country operates smoothly and that citizens receive
+          essential public services. Taxes are used to build and maintain roads,
+          hospitals, schools, and other infrastructure; support national
+          security; strengthen public health systems; provide social protection
+          programs; and sustain many government operations. Understanding how
+          tax works is important because everyone who earns income has a legal
+          responsibility to contribute, and failure to comply can lead to
+          penalties. By learning how PAYE, reliefs, deductions, and tax brackets
+          work, you gain control over your finances and can make informed
+          decisions about budgeting, saving, and planning for the future.
+          Knowing how much tax you owe helps you avoid surprises in your payslip
+          and empowers you to stay compliant with tax regulations. With the
+          right tools—like this tax calculator—you can quickly estimate your tax
+          obligations and gain clarity on how your income is being taxed,
+          allowing you to manage your money more confidently and responsibly.
+        </p>
+      </div>
+      <div class="container-fluid bg-dark">
+        <div class="card-footer text-white text-center">
+          © 2025 TaxCalc. All rights reserved.
+        </div>
       </div>
     </div>
 
